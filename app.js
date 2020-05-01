@@ -43,6 +43,10 @@ app.get("/register", function(req, res) {
   res.render("register");
 });
 
+app.get("/hello", function(req, res) {
+  res.send("Hello!");
+})
+
 app.post("/register", function(req, res) {
   const newUser = new User({
     email: req.body.username,
